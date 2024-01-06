@@ -1,0 +1,146 @@
+@import "./reset.css";
+@import "./grid.css";
+:root {
+    --primary-color: #13cfc0;
+    --pink-color: #90339c;
+}
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+/* fonts */
+
+/* main */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    text-decoration: none;
+}
+.header {
+    position: fixed;
+    background-color: var(--primary-color);
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 4rem;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.nav__logo__icon {
+    border-radius: 50%;
+    background-color: var(--pink-color);
+    color: var(--primary-color);
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: .7rem;
+    transform: rotate(45deg);
+}
+
+.nav__logo__title {
+    color: var(--pink-color);
+}
+
+.nav__profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav__profile__title {
+    font-family: "Poppins Bold";
+}
+
+.nav__profile__img {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+}
+
+.nav__profile__link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav__profile__icon--open {
+    transform: rotate(180deg);
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    border: 1px solid black;
+    background-color: white;
+    padding: 1rem;
+    transition: all 100ms ease-in-out;
+}
+
+.dropdown__link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth {
+    background-color: var(--prijmary-color);
+    box-shadow: 0 0 4rem rgba(19,182,255,24%);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 5rem auto;
+    max-width: 24rem;
+}
+
+.auth__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth__title {
+    font-size: 1.5rem;
+    font-family: "Poppins Bold";
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.auth__input {
+    box-shadow: 0 0 5rem rgba(96,233,255,27%);
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    padding: .7rem;
+}
+
+.auth__button {
+    background-color: var(--pink-color);
+    border-radius: 5rem;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins SemiBold";
+    font-size: 1.1rem;
+    outline: none;
+    padding: .7rem;
+}
